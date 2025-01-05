@@ -1,0 +1,39 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "cargo",
+        "type": "shell",
+        "command": "cargo",
+        "args": ["tauri", "dev"],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        }
+      },
+      {
+        "label": "ui:dev",
+        "type": "shell",
+        // Il task `dev` rimane in background
+        "isBackground": true,
+        // Cambia "yarn dev" con "npm run start"
+        "command": "npm",
+        "args": ["run", "start"],
+        "options": {
+          "cwd": "./pianifica" 
+        }
+      },
+      {
+        "label": "ui:build",
+        "type": "shell",
+        // Cambia "yarn build" con "npm run build"
+        "command": "npm",
+        "args": ["run", "build"],
+        "options": {
+          "cwd": "./pianifica" 
+        }
+      }
+  
+    ]
+  }
+  
