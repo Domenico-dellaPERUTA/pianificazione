@@ -5,25 +5,31 @@ export interface Todo {
   id: number;
   title: string;
   done: boolean;
+  priority: 'Low' | 'Medium' | 'High';
 }
 
 @Injectable({
   providedIn: 'root',
 })
 export class TodoService {
-  // Fetch todos from the backend
   async getTodos(): Promise<Todo[]> {
     return await invoke<Todo[]>('get_todos');
   }
 
-  // Add a new todo
-  async addTodo(title: string): Promise<Todo[]> {
-    return await invoke<Todo[]>('add_todo', { title });
+  async addTodo(title: string, priority: 'Low' | 'Medium' | 'High'): Promise<Todo[]> {
+    return await invoke<Todo[]>('add_todo', { title, priority });
   }
 
-  // Toggle the status of a todo
   async toggleTodo(id: number): Promise<Todo[]> {
     return await invoke<Todo[]>('toggle_todo', { id });
   }
-}
 
+  async updatePriority(id: number, priority: 'Low' | 'Medium' | 'High'): Promise<Todo[]> {
+    return await invoke<Todo[]>('update_priority', { id, priority });
+  }
+
+  async resetTodos(): Promise<Todo[]> {
+    await invoke('reset_todos');
+    return this.getTodos();
+  }
+}

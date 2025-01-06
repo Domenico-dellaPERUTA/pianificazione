@@ -1,28 +1,35 @@
 <div class="todo-app">
-  <h1 class="app-header">Todo App</h1>
+  <h1>Lista delle cose da fare</h1>
 
-  <div class="todo-input">
-    <input
-      [(ngModel)]="newTodo"
-      placeholder="Add a new todo..."
-      class="todo-input-field"
+  <div class="new-todo">
+    <input 
+      type="text" 
+      [(ngModel)]="newTodo" 
+      placeholder="Nuova attività" 
+      class="input-todo"
     />
-    <button (click)="addTodo()" class="todo-add-button">Add</button>
+    <select [(ngModel)]="newPriority" class="select-priority">
+      <option value="High">Alta</option>
+      <option value="Medium">Media</option>
+      <option value="Low">Bassa</option>
+    </select>
+    <button (click)="addTodo()" class="btn-add">Aggiungi</button>
+    <button (click)="resetTodos()" class="btn-reset">Resetta</button>
   </div>
 
   <ul class="todo-list">
-    <li *ngFor="let todo of todos" class="todo-item">
-      <label class="todo-label">
-        <input
-          type="checkbox"
-          [(ngModel)]="todo.done"
-          (change)="toggleTodo(todo.id)"
-          class="todo-checkbox"
-        />
-        <span [class.completed]="todo.done" class="todo-text">
-          {{ todo.title }}
-        </span>
-      </label>
+    <li 
+      *ngFor="let todo of todos" 
+      [class.done]="todo.done"
+    >
+      <span class="todo-title">{{ todo.title }}</span>
+      
+      
+      <button (click)="toggleTodo(todo.id)" class="btn-toggle">
+        <span *ngIf="todo.priority === 'High'"   >🔥</span>
+        <span *ngIf="todo.priority === 'Medium'" >⚡</span>
+        <span *ngIf="todo.priority === 'Low'"    >🌿</span>
+      </button>
     </li>
   </ul>
 </div>

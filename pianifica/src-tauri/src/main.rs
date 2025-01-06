@@ -1,96 +1,86 @@
-use serde::{Deserialize, Serialize};
-use std::fs::{self, File};
-use std::io::{Read, Write};
-use std::sync::Mutex;
-use tauri::State;
-use dirs::data_local_dir;
+use std::sync::{Arc, Mutex};
+use tauri::{State};
 
-#[derive(Serialize, Deserialize, Clone)]
+#[derive(Clone, Debug, serde::Serialize, serde::Deserialize)]
 struct Todo {
     id: u32,
     title: String,
+    priority: String,
     done: bool,
 }
 
 struct AppState {
-    todos: Mutex<Vec<Todo>>,
-    file_path: String,
-}
-
-impl AppState {
-    fn load_todos(&self) -> Vec<Todo> {
-        let file_path = &self.file_path;
-        if let Ok(mut file) = File::open(file_path) {
-            let mut contents = String::new();
-            if file.read_to_string(&mut contents).is_ok() {
-                if let Ok(todos) = serde_json::from_str(&contents) {
-                    return todos;
-                }
-            }
-        }
-        Vec::new()
-    }
-
-    fn save_todos(&self, todos: &Vec<Todo>) {
-        let file_path = &self.file_path;
-        if let Ok(mut file) = File::create(file_path) {
-            if let Ok(contents) = serde_json::to_string_pretty(todos) {
-                let _ = file.write_all(contents.as_bytes());
-            }
-        }
-    }
+    todos: Arc<Mutex<Vec<Todo>>>,
 }
 
 #[tauri::command]
 fn get_todos(state: State<AppState>) -> Vec<Todo> {
-    let todos = state.load_todos();
-    todos
+    // Blocca il mutex e clona i dati
+    let todos = state.todos.lock().unwrap();
+    todos.clone()
 }
 
 #[tauri::command]
-fn add_todo(state: State<AppState>, title: String) -> Vec<Todo> {
+fn add_todo(state: State<AppState>, title: String, priority: String) -> Vec<Todo> {
     let mut todos = state.todos.lock().unwrap();
-    let new_id = if todos.is_empty() {
-        1
-    } else {
-        todos.iter().map(|t| t.id).max().unwrap() + 1
-    };
 
-    let new_todo = Todo {
-        id: new_id,
-        title,
-        done: false,
+    // Crea un nuovo TODO con ID unico
+    let id = if let Some(last) = todos.last() {
+        last.id + 1
+    } else {
+        1
     };
-    todos.push(new_todo);
-    state.save_todos(&todos);
-    todos.clone()
+    todos.push(Todo {
+        id,
+        title,
+        priority,
+        done: false,
+    });
+
+    // Rilascia il guard prima di restituire i todo
+    drop(todos);
+    get_todos(state)
 }
 
 #[tauri::command]
 fn toggle_todo(state: State<AppState>, id: u32) -> Vec<Todo> {
     let mut todos = state.todos.lock().unwrap();
+
+    // Alterna lo stato di completamento
     if let Some(todo) = todos.iter_mut().find(|t| t.id == id) {
         todo.done = !todo.done;
     }
-    state.save_todos(&todos);
-    todos.clone()
+
+    // Rilascia il guard prima di restituire i todo
+    drop(todos);
+    get_todos(state)
+}
+
+#[tauri::command]
+fn reset_todos(state: State<AppState>) -> Vec<Todo> {
+    let mut todos = state.todos.lock().unwrap();
+
+    // Svuota la lista
+    todos.clear();
+
+    // Rilascia il guard prima di restituire i todo
+    drop(todos);
+    get_todos(state)
 }
 
 fn main() {
-    let file_path = std::env::current_dir()
-        //data_local_dir()
-        .expect("Failed to get local data directory")
-        //.join("pianifica")
-        .join("todos.json");
-
-    fs::create_dir_all(file_path.parent().unwrap()).expect("Failed to create app data directory");
+    let app_state = AppState {
+        todos: Arc::new(Mutex::new(Vec::new())),
+    };
 
     tauri::Builder::default()
-        .manage(AppState {
-            todos: Mutex::new(Vec::new()),
-            file_path: file_path.to_string_lossy().to_string(),
-        })
-        .invoke_handler(tauri::generate_handler![get_todos, add_todo, toggle_todo])
+        .manage(app_state)
+        .invoke_handler(tauri::generate_handler![
+            get_todos,
+            add_todo,
+            toggle_todo,
+            reset_todos
+        ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }
