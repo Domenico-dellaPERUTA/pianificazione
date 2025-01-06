@@ -1,0 +1,463 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		21C8F23C396063FAE94DDD1A /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79A2CAAAFF3D9D3A800AEB1C /* MetalKit.framework */; };
+		52CA506BF81E1D24D23C05A7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38A1566E4ABFDCE163C06AD9 /* QuartzCore.framework */; };
+		602EA75BEA3F1F360E0B1D06 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58DAB16A9C86FFD68DDB0E5C /* Security.framework */; };
+		6E4ECB4042EAA44F030D9841 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = D83274C4529F3A8CFF56F354 /* main.mm */; };
+		7221CD811B210BB9DE8B1CC2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BF38611B37B3EDB63D9DAED /* CoreGraphics.framework */; };
+		7309AE2AA92C8DC33A135EE1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE2FBD266D662415F59760F8 /* UIKit.framework */; };
+		751398CF44D51B13B0201AA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A035FD2A43A5D29C53C4264 /* LaunchScreen.storyboard */; };
+		A3E894EA3DFD0BD4A6C886ED /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64B7DABEEC3C6BE8181E0E88 /* WebKit.framework */; };
+		A8C2200EBFB97770AD73B1AE /* libapp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 856F414137DE5A0EFED0B5EE /* libapp.a */; };
+		AE86EED4E55658C0652E7558 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEBD79565126672774C174B8 /* Assets.xcassets */; };
+		B172D29DAF03AF6B044895C9 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 594C54FBF5FB05423B9D4221 /* Metal.framework */; };
+		EB8D6413C2A91063841ABC2C /* assets in Resources */ = {isa = PBXBuildFile; fileRef = CBF2870A5C4D28A4E22BB895 /* assets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1CF1A7C4119A15B894A998E7 /* bindings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bindings.h; sourceTree = "<group>"; };
+		2BF38611B37B3EDB63D9DAED /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		38A1566E4ABFDCE163C06AD9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		4A2B6427483A6F7D14EB4C7C /* pianifica_iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = pianifica_iOS.entitlements; sourceTree = "<group>"; };
+		4C1E44AD78DD42BA21D31301 /* lib.rs */ = {isa = PBXFileReference; path = lib.rs; sourceTree = "<group>"; };
+		58DAB16A9C86FFD68DDB0E5C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		594C54FBF5FB05423B9D4221 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		64B7DABEEC3C6BE8181E0E88 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		79A2CAAAFF3D9D3A800AEB1C /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		856F414137DE5A0EFED0B5EE /* libapp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libapp.a; sourceTree = "<group>"; };
+		90C1437A3EBB3A085289C526 /* main.rs */ = {isa = PBXFileReference; path = main.rs; sourceTree = "<group>"; };
+		9A035FD2A43A5D29C53C4264 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CA9DE6EC627E390B89680224 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CBF2870A5C4D28A4E22BB895 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = SOURCE_ROOT; };
+		D83274C4529F3A8CFF56F354 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		DE2FBD266D662415F59760F8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DEBD79565126672774C174B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E7BDAFC64C49F7BA937BAEC9 /* pianifica_iOS.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = pianifica_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		13DE5189C328616A03B436F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8C2200EBFB97770AD73B1AE /* libapp.a in Frameworks */,
+				7221CD811B210BB9DE8B1CC2 /* CoreGraphics.framework in Frameworks */,
+				B172D29DAF03AF6B044895C9 /* Metal.framework in Frameworks */,
+				21C8F23C396063FAE94DDD1A /* MetalKit.framework in Frameworks */,
+				52CA506BF81E1D24D23C05A7 /* QuartzCore.framework in Frameworks */,
+				602EA75BEA3F1F360E0B1D06 /* Security.framework in Frameworks */,
+				7309AE2AA92C8DC33A135EE1 /* UIKit.framework in Frameworks */,
+				A3E894EA3DFD0BD4A6C886ED /* WebKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0B0CD986DE4725EA20B2595B /* pianifica_iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CA9DE6EC627E390B89680224 /* Info.plist */,
+				4A2B6427483A6F7D14EB4C7C /* pianifica_iOS.entitlements */,
+			);
+			path = pianifica_iOS;
+			sourceTree = "<group>";
+		};
+		2540B03B17ECFCF06A889456 /* bindings */ = {
+			isa = PBXGroup;
+			children = (
+				1CF1A7C4119A15B894A998E7 /* bindings.h */,
+			);
+			path = bindings;
+			sourceTree = "<group>";
+		};
+		350FD3B78D72511C714549A7 /* pianifica */ = {
+			isa = PBXGroup;
+			children = (
+				D83274C4529F3A8CFF56F354 /* main.mm */,
+				2540B03B17ECFCF06A889456 /* bindings */,
+			);
+			path = pianifica;
+			sourceTree = "<group>";
+		};
+		4205811E2E138E659EE635DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2BF38611B37B3EDB63D9DAED /* CoreGraphics.framework */,
+				856F414137DE5A0EFED0B5EE /* libapp.a */,
+				594C54FBF5FB05423B9D4221 /* Metal.framework */,
+				79A2CAAAFF3D9D3A800AEB1C /* MetalKit.framework */,
+				38A1566E4ABFDCE163C06AD9 /* QuartzCore.framework */,
+				58DAB16A9C86FFD68DDB0E5C /* Security.framework */,
+				DE2FBD266D662415F59760F8 /* UIKit.framework */,
+				64B7DABEEC3C6BE8181E0E88 /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		567B3360DAEDC21D65A05BAE /* src */ = {
+			isa = PBXGroup;
+			children = (
+				4C1E44AD78DD42BA21D31301 /* lib.rs */,
+				90C1437A3EBB3A085289C526 /* main.rs */,
+			);
+			name = src;
+			path = ../../src;
+			sourceTree = "<group>";
+		};
+		8DD7E674821E5180B3D258EC /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				350FD3B78D72511C714549A7 /* pianifica */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		993628D3DF5C670F5F755FD6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E7BDAFC64C49F7BA937BAEC9 /* pianifica_iOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BA6D6743C559515490089EBD = {
+			isa = PBXGroup;
+			children = (
+				CBF2870A5C4D28A4E22BB895 /* assets */,
+				DEBD79565126672774C174B8 /* Assets.xcassets */,
+				9A035FD2A43A5D29C53C4264 /* LaunchScreen.storyboard */,
+				BC76C4D8F3C6631F9F0D88F4 /* Externals */,
+				0B0CD986DE4725EA20B2595B /* pianifica_iOS */,
+				8DD7E674821E5180B3D258EC /* Sources */,
+				567B3360DAEDC21D65A05BAE /* src */,
+				4205811E2E138E659EE635DD /* Frameworks */,
+				993628D3DF5C670F5F755FD6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BC76C4D8F3C6631F9F0D88F4 /* Externals */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Externals;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		54F7410ECA197145C75BBD0C /* pianifica_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA2F8677BE4648D3C8D1233B /* Build configuration list for PBXNativeTarget "pianifica_iOS" */;
+			buildPhases = (
+				ECD853155A330A51CA1C8D1E /* Build Rust Code */,
+				859188898B0FF61BF82FEC04 /* Sources */,
+				4FCDBFF4F14EB9CFA8FB350B /* Resources */,
+				13DE5189C328616A03B436F7 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = pianifica_iOS;
+			productName = pianifica_iOS;
+			productReference = E7BDAFC64C49F7BA937BAEC9 /* pianifica_iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CDA7DE0079B2F62CF706885A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+				};
+			};
+			buildConfigurationList = BA306314125CB253E8DEF1A0 /* Build configuration list for PBXProject "pianifica" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = BA6D6743C559515490089EBD;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				54F7410ECA197145C75BBD0C /* pianifica_iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4FCDBFF4F14EB9CFA8FB350B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE86EED4E55658C0652E7558 /* Assets.xcassets in Resources */,
+				751398CF44D51B13B0201AA6 /* LaunchScreen.storyboard in Resources */,
+				EB8D6413C2A91063841ABC2C /* assets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		ECD853155A330A51CA1C8D1E /* Build Rust Code */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Build Rust Code";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(SRCROOT)/Externals/x86_64/${CONFIGURATION}/libapp.a",
+				"$(SRCROOT)/Externals/arm64/${CONFIGURATION}/libapp.a",
+				"$(SRCROOT)/Externals/arm64-sim/${CONFIGURATION}/libapp.a",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cargo tauri ios xcode-script -v --platform ${PLATFORM_DISPLAY_NAME:?} --sdk-root ${SDKROOT:?} --framework-search-paths \"${FRAMEWORK_SEARCH_PATHS:?}\" --header-search-paths \"${HEADER_SEARCH_PATHS:?}\" --gcc-preprocessor-definitions \"${GCC_PREPROCESSOR_DEFINITIONS:-}\" --configuration ${CONFIGURATION:?} ${FORCE_COLOR} ${ARCHS:?}";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		859188898B0FF61BF82FEC04 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E4ECB4042EAA44F030D9841 /* main.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0AEB46ECD1FF883D7F9BCD80 /* debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ARCHS = (
+					arm64,
+					x86_64,
+				);
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = pianifica_iOS/pianifica_iOS.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				"EXCLUDED_ARCHS[sdk=iphoneos*]" = "arm64-sim x86_64";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\".\"",
+				);
+				INFOPLIST_FILE = pianifica_iOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				"LIBRARY_SEARCH_PATHS[arch=arm64-sim]" = "$(inherited) $(PROJECT_DIR)/Externals/arm64-sim/$(CONFIGURATION) $(SDKROOT)/usr/lib/swift $(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME) $(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)";
+				"LIBRARY_SEARCH_PATHS[arch=arm64]" = "$(inherited) $(PROJECT_DIR)/Externals/arm64/$(CONFIGURATION) $(SDKROOT)/usr/lib/swift $(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME) $(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)";
+				"LIBRARY_SEARCH_PATHS[arch=x86_64]" = "$(inherited) $(PROJECT_DIR)/Externals/x86_64/$(CONFIGURATION) $(SDKROOT)/usr/lib/swift $(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME) $(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "it.quasar-x7.pianifica.app";
+				PRODUCT_NAME = pianifica;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64  x86_64";
+			};
+			name = debug;
+		};
+		3F5FB7D100E4ECF6D12ACCE8 /* release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ARCHS = (
+					arm64,
+					x86_64,
+				);
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = pianifica_iOS/pianifica_iOS.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				"EXCLUDED_ARCHS[sdk=iphoneos*]" = "arm64-sim x86_64";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\".\"",
+				);
+				INFOPLIST_FILE = pianifica_iOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				"LIBRARY_SEARCH_PATHS[arch=arm64-sim]" = "$(inherited) $(PROJECT_DIR)/Externals/arm64-sim/$(CONFIGURATION) $(SDKROOT)/usr/lib/swift $(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME) $(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)";
+				"LIBRARY_SEARCH_PATHS[arch=arm64]" = "$(inherited) $(PROJECT_DIR)/Externals/arm64/$(CONFIGURATION) $(SDKROOT)/usr/lib/swift $(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME) $(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)";
+				"LIBRARY_SEARCH_PATHS[arch=x86_64]" = "$(inherited) $(PROJECT_DIR)/Externals/x86_64/$(CONFIGURATION) $(SDKROOT)/usr/lib/swift $(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME) $(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "it.quasar-x7.pianifica.app";
+				PRODUCT_NAME = pianifica;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64  x86_64";
+			};
+			name = release;
+		};
+		901FDFF01F6BF2AA53A85A1C /* release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = release;
+		};
+		FAD1E83ADE89B60268E243C8 /* debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BA306314125CB253E8DEF1A0 /* Build configuration list for PBXProject "pianifica" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAD1E83ADE89B60268E243C8 /* debug */,
+				901FDFF01F6BF2AA53A85A1C /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = debug;
+		};
+		EA2F8677BE4648D3C8D1233B /* Build configuration list for PBXNativeTarget "pianifica_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AEB46ECD1FF883D7F9BCD80 /* debug */,
+				3F5FB7D100E4ECF6D12ACCE8 /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CDA7DE0079B2F62CF706885A /* Project object */;
+}

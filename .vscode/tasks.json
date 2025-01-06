@@ -2,10 +2,10 @@
     "version": "2.0.0",
     "tasks": [
       {
-        "label": "cargo",
+        "label": "cargo dev ios",
         "type": "shell",
         "command": "cargo",
-        "args": ["tauri", "dev"],
+        "args": ["tauri", "dev", "ios"],
         "group": {
           "kind": "build",
           "isDefault": true

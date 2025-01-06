@@ -3,7 +3,7 @@
     "configurations": [
     
       {
-        "name": "Cargo Tauri Dev",
+        "name": "run iOS",
         "type": "rust",
         "request": "launch",
         "program": "${workspaceFolder}/target/debug/pianifica", 
@@ -12,7 +12,7 @@
         "env": {
           "RUST_BACKTRACE": "1"
         },
-        "preLaunchTask": "cargo",
+        "preLaunchTask": "cargo dev ios",
         "stopAtEntry": false
       },
 
