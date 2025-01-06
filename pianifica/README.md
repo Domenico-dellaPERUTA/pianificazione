@@ -7,7 +7,7 @@ This template should help get you started developing with Tauri and Angular.
 [VS Code](https://code.visualstudio.com/) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer) + [Angular Language Service](https://marketplace.visualstudio.com/items?itemName=Angular.ng-template).
 
 
-# INSTALLAZIONE
+# INSTALLAZIONE e CREAZIONE 
 
 ## Installazione tools "create-tauri-app"
 > cargo install create-tauri-app --locked
@@ -32,11 +32,27 @@ This template should help get you started developing with Tauri and Angular.
 
 >npm install
 
-### esecuzione da desktop
+#### esecuzione da desktop
 > npm run tauri dev 
 
-### pacchetti aggiuntivi installati
+#### pacchetti aggiuntivi installati
 > npm install @tauri-apps/api
 
 (per poter effeturare le chiamate tra frontend e backend)
 
+# Clonazione Progetto da Repository Git
+> clone https://github.com/Domenico-dellaPERUTA/pianificazione.git
+
+#### installa moduli nodejs
+> nmp i
+
+#### installa rust/cargo, tauri-cli e LLDB (debug)
+> Rust e Cargo vedi documentazione ufficiale
+...
+
+> cargo install tauri-cli
+
+#### configura plugin Visual Studio 
+- rust (extensions)
+- CodeLLDB
+- angular (Angular Language Service)
